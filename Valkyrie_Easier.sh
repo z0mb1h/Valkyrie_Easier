@@ -24,13 +24,13 @@ dialog --msgbox "
     dialog --msgbox "Digite 1 para continuar ou 2 para sair e aperte ENTER " 10 50
     read eula
     echo ""
-				if [ $eula = 1 ]; then
-		echo ""
-				elif [ $eula = 2 ]; then
-		exit
-				else
+	if [ $eula = 1 ]; then
+    echo ""
+	elif [ $eula = 2 ]; then
+    exit
+	else
     dialog --msgbox "Opção Inválida" 10 50 && exit
-				fi;
+	fi;
     cd arquivos
     cp lang.sh /etc/profile.d/lang.sh
     cp 90-keyboard-layout.conf /etc/X11/xorg.conf.d/
